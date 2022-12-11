@@ -1,5 +1,6 @@
 import { createStore } from "redux";
 import { devToolsEnhancer } from "@redux-devtools/extension";
+import { statusFilters } from "./constants";
 
 // Начальное значение состояния Redux для корневого редюсера,
 // если не передать параметр preloadedState.
@@ -12,7 +13,7 @@ const initialState = {
     { id: 4, text: "Build amazing apps", completed: false },
   ],
   filters: {
-    status: "all",
+    status: statusFilters.all,
   },
 };
 // Пока что используем редюсер который
